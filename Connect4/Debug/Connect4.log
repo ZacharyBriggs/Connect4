@@ -1,0 +1,4 @@
+﻿  Column.cpp
+c:\users\s178020\documents\visual studio 2015\projects\connect4\connect4\column.cpp(14): warning C4390: ';': empty controlled statement found; is this the intent?
+  Connect4.vcxproj -> c:\users\s178020\documents\visual studio 2015\Projects\Connect4\Debug\Connect4.exe
+  Connect4.vcxproj -> c:\users\s178020\documents\visual studio 2015\Projects\Connect4\Debug\Connect4.pdb (Partial PDB)
