@@ -15,7 +15,7 @@ bool Column::PlaceToken(char token)
 {
 	if (IsFull() == false);
 	{
-		m_Cells->m_Token = token;
+		m_Cells[m_LastOccupied].m_Token = token;
 		m_LastOccupied++;
 	}
 	return false;

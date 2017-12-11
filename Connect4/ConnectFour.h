@@ -1,5 +1,7 @@
 #pragma once
 #include "Column.h"
+#include <stdlib.h>
+#include <iostream>
 
 class ConnectFour
 {
