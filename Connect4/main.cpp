@@ -4,7 +4,7 @@
 #include "ConnectFour.h"
 int main()
 {
-	ConnectFour Board(7,7);
+	ConnectFour Board(8,7);
 	while (Board.CheckVictory() == false)
 		Board.Update();
 }

@@ -1,6 +1,3 @@
 ﻿  ConnectFour.cpp
-  Column.cpp
-c:\users\s178020\documents\github\connect4\connect4\column.cpp(16): warning C4390: ';': empty controlled statement found; is this the intent?
-  Generating Code...
   Connect4.vcxproj -> C:\Users\s178020\Documents\GitHub\Connect4\Debug\Connect4.exe
   Connect4.vcxproj -> C:\Users\s178020\Documents\GitHub\Connect4\Debug\Connect4.pdb (Partial PDB)
