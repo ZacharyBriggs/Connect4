@@ -8,10 +8,9 @@ ConnectFour::ConnectFour(int numCols, int colHeight)
 	m_ColHeights = colHeight;
 	m_Columns = new Column[numCols];
 	for (int i = 0; i < m_NumCols; i++)
-	{
 		m_Columns[i] = Column(colHeight);
-	}
 	m_ActiveToken = 'O';
+	m_State = eState::PLAYER_ONE;
 }
 bool ConnectFour::Update()
 {
@@ -35,6 +34,9 @@ bool ConnectFour::PlacePiece(int col)
 }
 bool ConnectFour::CheckVictory()
 {
+	if (m_State == eState::PLAYER_ONE || m_State == eState::PLAYER_TWO)
+		m_State = eState::CHECK_VICTORY;
+	if(m_State == eState::CHECK_VICTORY)
 	for (int i = 0; i < m_NumCols;i++)
 	{
 		for (int j = 0; j < m_ColHeights; j++)
@@ -45,6 +47,7 @@ bool ConnectFour::CheckVictory()
 				PrintBoard();
 				std::cout << m_ActiveToken << " wins!\n";
 				system("pause");
+				m_State = eState::GAME_OVER;
 				return true;
 			}
 			if ((m_Columns[i].m_Cells[j].m_Token == 88 || m_Columns[i].m_Cells[j].m_Token == 79) && m_Columns[i].m_Cells[j] == m_Columns[i+1].m_Cells[j]
@@ -53,6 +56,7 @@ bool ConnectFour::CheckVictory()
 				PrintBoard();
 				std::cout << m_ActiveToken << " wins!\n";
 				system("pause");
+				m_State = eState::GAME_OVER;
 				return true;
 			}
 		}

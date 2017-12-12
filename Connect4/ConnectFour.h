@@ -16,4 +16,6 @@ public:
 	bool PlacePiece(int col);
 	bool CheckVictory();
 	void PrintBoard();
+	enum eState { INIT, PLAYER_ONE, PLAYER_TWO, CHECK_VICTORY, GAME_OVER, EXIT };
+	eState m_State = eState::INIT;
 };
