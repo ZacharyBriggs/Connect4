@@ -68,7 +68,7 @@ bool ConnectFour::CheckVictory()
 				m_State = eState::GAME_OVER;
 				return true;
 			}
-			if (j == 0)
+		/*	if (j == 0 || j == 1 || j == 2)
 				continue;
 			if ((m_Columns[i].m_Cells[j].m_Token == 88 || m_Columns[i].m_Cells[j].m_Token == 79) && m_Columns[i].m_Cells[j] == m_Columns[i - 1].m_Cells[j + 1]
 				&& m_Columns[i - 1].m_Cells[j + 1] == m_Columns[i - 2].m_Cells[j + 2] && m_Columns[i - 2].m_Cells[j + 2] == m_Columns[i - 3].m_Cells[j + 3])
@@ -78,7 +78,7 @@ bool ConnectFour::CheckVictory()
 				system("pause");
 				m_State = eState::GAME_OVER;
 				return true;
-			}
+			}*/
 		}
 	}
 	return false;
